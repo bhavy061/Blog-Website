@@ -1,0 +1,12 @@
+<%- include("partials/header") %>
+<div class="max-w-2xl mx-auto mt-6">
+  <a href="/new" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">+ New Post</a>
+
+  <% blogPosts.forEach(blog => { %>
+    <div class="bg-white p-4 mt-4 shadow-md rounded">
+      <h2 class="text-2xl font-bold"><%= blog.title %></h2>
+      <p class="mt-2 text-gray-700"><%= blog.content %></p>
+    </div>
+  <% }) %>
+</div>
+<%- include("partials/footer") %>
